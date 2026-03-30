@@ -8,7 +8,6 @@ def run_security_scan():
     if result.returncode != 0:
         print("Security vulnerabilities found!")
         print(result.stdout)
-        # Exit with error to fail the CI/CD pipeline if issues exist
         sys.exit(1)
     print("No critical vulnerabilities detected. Scan passed.")
 
